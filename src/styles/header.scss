@@ -3,6 +3,7 @@
 header {
     width: 100%;
     display: grid;
+    align-items: center;
     grid-template-columns: 2fr 1fr;
     padding: 2rem;
     background-color: black;
@@ -15,13 +16,17 @@ header {
 
     ul {
         list-style: none;
+        height: 100%;
         display: grid;
+        justify-content: center;
+        align-items: center;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
 
         li {
             transform: scale(1);
             transition: all 0.2s;
+            text-align: center;
             &:hover {
                 transform: scale(1.1);
             }
