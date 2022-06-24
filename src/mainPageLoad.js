@@ -1,6 +1,7 @@
 import createElement from './elementCreate.js';
 import { homePage } from './home';
-import { menuPage } from './menu.js';
+import { menuPage } from './menu';
+import { contactPage } from './contact';
 
 export const mainPage = function() {
     const main = createElement('main');
@@ -32,6 +33,9 @@ export const mainPage = function() {
         } else if (e.target.dataset.link === '1') {
             main.textContent = '';
             main.append(menuPage());
+        } else if (e.target.dataset.link === '2') {
+            main.textContent = '';
+            main.append(contactPage());
         }
     })
 })
