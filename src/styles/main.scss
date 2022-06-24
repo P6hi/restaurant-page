@@ -1,3 +1,14 @@
-p {
-    color: red;
+@use './header.scss';
+@use './footer.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 1fr 6fr 1fr;
 }
