@@ -1,8 +1,12 @@
+@use './colours.scss' as c;
+
 header {
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 2rem;
+    background-color: c.$accent-one;
+    color: c.$accent-text;
 
     h1 {
         padding: 0;
