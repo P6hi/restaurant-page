@@ -1,6 +1,7 @@
 @use './header.scss';
 @use './footer.scss';
 @use './home.scss';
+@use './menu.scss';
 @use './colours.scss' as c;
 
 @font-face {
@@ -28,10 +29,10 @@ body {
 
 main {
     position: relative;
-    height: 100%;
     display: grid;
     align-items: center;
     justify-items: center;
+    max-height: 80vh;
     &::before {
         content: '';
         position: absolute;
