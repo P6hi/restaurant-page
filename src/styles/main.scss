@@ -1,5 +1,6 @@
 @use './header.scss';
 @use './footer.scss';
+@use './home.scss';
 @use './colours.scss' as c;
 
 @font-face {
@@ -40,5 +41,6 @@ main {
         background-position: center;
         background-repeat: no-repeat;
         filter: grayscale(100%);
+        z-index: -1;
     }
 }
