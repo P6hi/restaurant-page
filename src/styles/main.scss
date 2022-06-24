@@ -29,6 +29,9 @@ body {
 main {
     position: relative;
     height: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
     &::before {
         content: '';
         position: absolute;
@@ -41,6 +44,6 @@ main {
         background-position: center;
         background-repeat: no-repeat;
         filter: grayscale(100%);
-        z-index: -1;
+        z-index: -2;
     }
 }
