@@ -1,14 +1,25 @@
 @use './header.scss';
 @use './footer.scss';
+@use './colours.scss' as c;
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../assets/fonts/montserrat-v24-latin-regular.woff2') format('woff2'),
+         url('../assets/fonts/montserrat-v24-latin-regular.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
 
 * {
     box-sizing: border-box;
 }
 
 body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     display: grid;
     min-height: 100vh;
     grid-template-rows: 1fr 6fr 1fr;
+    background-color: c.$accent-two;
 }
