@@ -1,6 +1,7 @@
 import createElement from './elementCreate.js';
 
-export default function() {
+export const mainPage = function() {
+    const main = createElement('main');
     const linkItems = ['Home', 'Menu', 'Contact'];
     const header = createElement('header');
     const companyName = createElement('h1', 'company-name', 'Põhjamaa Köök');
@@ -12,7 +13,6 @@ export default function() {
         link.append(anchor);
         linkList.append(link);
     }
-    const main = createElement('main');
     const footer = createElement('footer');
     header.append(companyName);
     header.append(linkList);
@@ -20,4 +20,5 @@ export default function() {
     document.body.append(header);
     document.body.append(main);
     document.body.append(footer);
+    return main;
 }
