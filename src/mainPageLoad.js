@@ -1,4 +1,6 @@
 import createElement from './elementCreate.js';
+import { homePage } from './home';
+import { menuPage } from './menu.js';
 
 export const mainPage = function() {
     const main = createElement('main');
@@ -10,6 +12,7 @@ export const mainPage = function() {
     for (let i = 0; i < linkItems.length; i++) {
         const link = createElement('li');
         const anchor = createElement('a', undefined, linkItems[i]);
+        anchor.setAttribute('data-link', `${i}`);
         link.append(anchor);
         linkList.append(link);
     }
@@ -20,5 +23,17 @@ export const mainPage = function() {
     document.body.append(header);
     document.body.append(main);
     document.body.append(footer);
+    const links = document.querySelectorAll('a');
+    links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        if (e.target.dataset.link === '0') {
+            main.textContent = '';
+            main.append(homePage());
+        } else if (e.target.dataset.link === '1') {
+            main.textContent = '';
+            main.append(menuPage());
+        }
+    })
+})
     return main;
 }
